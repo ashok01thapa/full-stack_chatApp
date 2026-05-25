@@ -12,7 +12,7 @@ spec:
     metadata:
       name: mongodb-pod
       namespace: chat-app
-      labels: 
+      labels:
         app: mongodb
     spec:
       containers:
@@ -26,9 +26,6 @@ spec:
         - name: MONGO_INITDB_ROOT_PASSWORD
           value: secret
       volumes:
-      - name: mongo-data
-        persistentVolumeClaim:
-          claimName: mongodb-pvc   
-
-
-
+       - name: mongo-data
+         persistentVolumeClaim:
+          claimName: mongodb-pvc

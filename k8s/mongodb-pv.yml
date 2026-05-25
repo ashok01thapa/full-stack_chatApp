@@ -5,8 +5,9 @@ metadata:
   namespace: chat-app
 spec:
   accessModes:
-    - ReadWriteOnce
+  - ReadWriteOnce
   capacity:
     storage: 5Gi
   hostPath:
-    path: /data
+    path: /mnt/data
+  storageClassName: standard
